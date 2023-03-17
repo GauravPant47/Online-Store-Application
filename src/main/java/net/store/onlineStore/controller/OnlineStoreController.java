@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import net.store.onlineStore.model.CustomerModel;
 import net.store.onlineStore.model.ProductModel;
-import net.store.onlineStore.repository.CustomerRepository;
+//import net.store.onlineStore.repository.CustomerRepository;
 import net.store.onlineStore.repository.ProductRepository;
 
 @RestController
@@ -15,21 +15,21 @@ public class OnlineStoreController {
 	
 	@Autowired
 	private ProductRepository productRepository; 
-	@Autowired
-	private CustomerRepository customerRepository;
+//	@Autowired
+//	private CustomerRepository customerRepository;
 	
 	@PostMapping("/product")
-	public ProductModel getByProduct(@RequestBody ProductModel productModel) {
-		ProductModel prodModel = productRepository.findByProductId(productModel.getProductId());
-		return productModel;
+	public ProductModel getByProduct(@RequestBody CustomerModel customerModel) {
+		ProductModel prodModel = productRepository.findByCustomerId(customerModel.getcustomerId());
+		return prodModel;
 	}
 	
 	
-	@PostMapping("/customer")
-	public CustomerModel getByCustomer(@RequestBody CustomerModel customerModel) {
-		CustomerModel cusmodel = customerRepository.fineByCustomerID(customerModel.getCustmerId());
-		return cusmodel;
-	}
+//	@PostMapping("/customer")
+//	public CustomerModel getByCustomer(@RequestBody CustomerModel customerModel) {
+//		CustomerModel cusmodel = customerRepository.fineByCustomerID(customerModel.getCustmerId());
+//		return cusmodel;
+//	}
 	
 	
 	

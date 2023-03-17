@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import net.store.onlineStore.model.ProductModel;
 
-public interface ProductRepository extends CrudRepository<ProductModel, Long>{
-	ProductModel findByProductId(int productId);
+public interface ProductRepository extends CrudRepository<ProductModel, Long> {
+	ProductModel findByCustomerId(int customerId);
 }

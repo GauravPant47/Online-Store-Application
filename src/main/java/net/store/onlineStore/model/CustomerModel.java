@@ -15,7 +15,7 @@ public class CustomerModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "customer_id")
-	private int custmerId;
+	private int customerId;
 	
 	@Column(name = "name")
 	private String name;
@@ -32,12 +32,12 @@ public class CustomerModel {
 	@Column(name = "customer_address")
 	private String customerAddress;
 
-	public int getCustmerId() {
-		return custmerId;
+	public int getcustomerId() {
+		return customerId;
 	}
 
-	public void setCustmerId(int custmerId) {
-		this.custmerId = custmerId;
+	public void setCustmerId(int customerId) {
+		this.customerId = customerId;
 	}
 
 	public String getName() {

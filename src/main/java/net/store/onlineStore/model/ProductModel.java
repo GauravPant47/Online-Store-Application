@@ -14,6 +14,9 @@ public class ProductModel {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "product_id")
 	private int productId;
+	
+	@Column(name = "customer_id")
+	private int customerId;
 
 	@Column(name = "product_name")
 	private String productName;
@@ -29,6 +32,16 @@ public class ProductModel {
 
 	@Column(name = "product_description")
 	private String productDescription;
+
+	
+	
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 
 	public String getProductDescription() {
 		return productDescription;
