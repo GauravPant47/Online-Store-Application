@@ -1,14 +1,5 @@
-DROP TABLE IF EXISTS `customer`;
 DROP TABLE IF EXISTS `product`;
 
-CREATE TABLE `customer`(
-`customer_id` int AUTO_INCREMENT PRIMARY KEY,
-`name` varchar(30) NOT NULL,
-`email_id` varchar(20) NOT NULL,
-`dob` date DEFAULT NULL,
-`mobile_number` varchar(15) NOT NULL,
-`customer_address` varchar(255) NOT NULL
-);
 
 CREATE TABLE `product`(
 `product_id` int AUTO_INCREMENT PRIMARY KEY,
@@ -20,14 +11,6 @@ CREATE TABLE `product`(
 `product_description` varchar(255) NOT NULL
 );
 
-INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
-VALUES('Nikhil','nikhil@yahoo.com','9568947592','rohini R No 12 h2',CURDATE());
-
-INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
-VALUES('Rohan','rohan@yahoo.com','9568965894','sector 24 R No 34 h 35',CURDATE());
-
-INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
-VALUES('Dipika','dipika@yahoo.com','9568965785','rajput rood H No5 G No 18',CURDATE());
 
 
 INSERT INTO `product`(`customer_id`,`product_name`,`product_type`,`priduct_prise`,`contry_origin`,`product_description`)
