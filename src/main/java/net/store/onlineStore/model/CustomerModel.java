@@ -27,7 +27,7 @@ public class CustomerModel {
 	private Date dob;
 	
 	@Column(name = "mobile_number")
-	private long mobileNumber;
+	private String mobileNumber;
 	
 	@Column(name = "customer_address")
 	private String customerAddress;
@@ -64,11 +64,11 @@ public class CustomerModel {
 		this.dob = dob;
 	}
 
-	public long getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
 
-	public void setMobileNumber(long mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
