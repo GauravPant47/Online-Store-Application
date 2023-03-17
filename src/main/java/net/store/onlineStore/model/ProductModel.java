@@ -1,11 +1,42 @@
 package net.store.onlineStore.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "product")
 public class ProductModel {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "product_id")
 	private int productId;
+
+	@Column(name = "product_name")
 	private String productName;
+
+	@Column(name = "product_type")
 	private String productType;
+
+	@Column(name = "priduct_prise")
 	private String productPrise;
+
+	@Column(name = "contry_origin")
 	private String countryOrigin;
+
+	@Column(name = "product_description")
+	private String productDescription;
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
 
 	public int getProductId() {
 		return productId;
