@@ -17,17 +17,17 @@ CREATE TABLE `product`(
 `product_type` varchar(50) NOT NULL,
 `priduct_prise` varchar(15) NOT NULL,
 `contry_origin` varchar(15) NOT NULL,
-`product_description` varchar(15) NOT NULL
+`product_description` varchar(255) NOT NULL
 );
 
-INSERT INTO `customer`(`name`,`email_id`,`dob`,`mobile_number`,`customer_adderss`)
-VALUES('Nikhil','nikhil@yahoo.com',CURDATE(),'9568947592','rohini R.No-12 h2');
+INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
+VALUES('Nikhil','nikhil@yahoo.com','9568947592','rohini R No 12 h2',CURDATE());
 
-INSERT INTO `customer`(`name`,`email_id`,`dob`,`mobile_number`,`customer_adderss`)
-VALUES('Rohan','rohan@yahoo.com',CURDATE(),'9568965894','sector 24 R.No-34 h35');
+INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
+VALUES('Rohan','rohan@yahoo.com','9568965894','sector 24 R No 34 h 35',CURDATE());
 
-INSERT INTO `customer`(`name`,`email_id`,`dob`,`mobile_number`,`customer_adderss`)
-VALUES('Dipika','dipika@yahoo.com',CURDATE(),'9568965785','rajput rood H.No-5 G.No-18');
+INSERT INTO `customer`(`name`,`email_id`,`mobile_number`,`customer_address`,`dob`)
+VALUES('Dipika','dipika@yahoo.com','9568965785','rajput rood H No5 G No 18',CURDATE());
 
 
 INSERT INTO `product`(`customer_id`,`product_name`,`product_type`,`priduct_prise`,`contry_origin`,`product_description`)

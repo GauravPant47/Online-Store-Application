@@ -32,7 +32,7 @@ public class CustomerModel {
 	@Column(name = "customer_address")
 	private String customerAddress;
 
-	public int getcustomerId() {
+	public int getCustomerId() {
 		return customerId;
 	}
 
